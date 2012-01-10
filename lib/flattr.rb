@@ -22,10 +22,14 @@ module Flattr
         500 => '500 Server Error'
       }
 
-      def headers(status, headers = {})
+      def headers(status, headers = {}, contentType = "")
         css_class = "headers"
         lines = ["Status: #{STATUSES[status]}"]
-        lines << "Content-type: application/json;charset=utf-8"
+        if contentType != ""
+          lines << contentType
+        else
+          lines << "Content-type: application/json;charset=utf-8"
+        end
         headers.each do |key, value|
           lines << "#{key}: #{value}"
         end
@@ -53,16 +57,16 @@ module Flattr
 
       THING = {
         "type" => "thing",
-        "resource" => "https://api.flattr.dev/rest/v2/things/423405",
-        "link" => "https://flattr.dev/thing/423405",
+        "resource" => "https://api.flattr.com/rest/v2/things/423405",
+        "link" => "https://flattr.com/thing/423405",
         "id" => 423405,
         "url" => "http://blog.flattr.net/2011/10/api-v2-beta-out-whats-changed/",
         "language" => "en_GB",
         "category" => "text",
         "owner" => {
           "type" => "user",
-          "resource" => "https://api.flattr.dev/rest/v2/users/flattr",
-          "link" => "https://flattr.dev/profile/flattr",
+          "resource" => "https://api.flattr.com/rest/v2/users/flattr",
+          "link" => "https://flattr.com/profile/flattr",
           "username" => "flattr"
         },
         "hidden" => false,
@@ -83,7 +87,7 @@ module Flattr
 
       THING_LOOKUP = {
         "message" => "found",
-        "location" => "https://api.flattr.dev/rest/v2/things/423405"
+        "location" => "https://api.flattr.com/rest/v2/things/423405"
       }
 
       THING_LOOKUP_ERROR = {
@@ -93,7 +97,7 @@ module Flattr
 
       THING_CREATE = {
         "id" => 431547,
-        "link" => "https://api.flattr.dev/rest/v2/things/431547",
+        "link" => "https://api.flattr.com/rest/v2/things/431547",
         "message" => "ok",
         "description" => "Thing was created successfully"
       }
@@ -131,6 +135,31 @@ module Flattr
       FLATTR_CREATE = {
         "message" => "ok",
         "description" => "Thing was successfully flattred"
+      }
+
+      ACTIVITIES =
+      {
+        "items" =>
+        [
+          {
+            "published" => "2012-01-04T10:07:12+01:00",
+            "title" => "pthulin flattred \"Acoustid\"",
+            "actor" =>
+            {
+              "displayName" => "pthulin",
+              "url" => "https:\/\/flattr.dev\/profile\/pthulin",
+              "objectType" => "person"
+            },
+            "verb" => "like",
+            "object" =>
+            {
+              "displayName" => "Acoustid",
+              "url" => "https:\/\/flattr.dev\/thing\/459394\/Acoustid",
+              "objectType" => "bookmark"
+            },
+            "id" => "tag:flattr.com,2012-01-04:pthulin\/flattr\/459394"
+          }
+        ]
       }
 
       LANGUAGES = [

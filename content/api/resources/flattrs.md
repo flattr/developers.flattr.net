@@ -49,23 +49,17 @@ POST <%= @config[:api_url] %>/things/:id/flattr
 <%= headers(200) %>
 <%= json(:flattr_create) %>
 
-#### Flattr a autosubmit URL
+#### Flattr a URL
 
 **Scope required**: flattr
 
-The flattr resource can now flattr autosubmit URLs, you will need to url
-encode the data you pass into the `url` parameter. This means if you
-pass another users `user_id` a new thing will be created with the
-`user_id` as owner and the current user will flattr the new thing.
-If you specify the current users username as `user_id` the thing will be
-created but the current user cant flattr the new thing since you can't
-flattr your own things. For more information check out the [auto submit documentation](/auto_submit).
+The flattr resource can flattr URL:s. If the URL is an [auto-submit URL](/auto_submit) then the thing it's refering to is flattred instead and created if not existing.
 
 ##### Request
 ```
 POST <%=@config[:api_url]%>/flattr
 ```
-<%= json({:url => "http://flattr.com/submit/auto?url=http://blog.flattr.net/2011/10/api-v2-beta-out-whats-changed/",:user_id => "flattr"}) %>
+<%= json({:url => "http://flattr.com/submit/auto?url=http://blog.flattr.net/2011/10/api-v2-beta-out-whats-changed/"}) %>
 
 ##### Example response to autosubmit URL
 

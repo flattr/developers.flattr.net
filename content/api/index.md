@@ -114,11 +114,10 @@ draft](http://tools.ietf.org/html/draft-ietf-oauth-v2-bearer-08).
 - **text/xml**
 - **application/yaml**
 
-Feeds are available for the **flattr** and **things**
-resource.
+[Activity Streams](http://activitystrea.ms/) feeds are available for some resource, like **flattr**, **things** and **activities**.
 
-- **application/stream+json**
-- **application/atom+xml**
+- **application/stream+json** - defined in this [specification](http://activitystrea.ms/specs/json/1.0/)
+- **application/atom+xml** - defined in this [specification](http://activitystrea.ms/specs/atom/1.0/)
 
 Default response format is **application/json**.
 

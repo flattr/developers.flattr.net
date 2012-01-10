@@ -1,5 +1,5 @@
 ---
-title: Embedded button
+title: Embedded buttons
 nav: main
 ---
 ### Introduction

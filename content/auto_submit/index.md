@@ -1,7 +1,7 @@
 ---
-title: Auto submit URL
+title: Auto-submit URL
 ---
-If you can’t use JavaScript on your site (or don’t want to) we also have a way of submitting things via URL’s. Here is the documentation for how to use the URL submit. Please bear in mind that the button will not have a counter.
+Instead of the [embedded buttons](/button/) you can use a specific kind of URL that just like the button will autocreate, "auto-submit", a Flattr thing on its first flattr. This is useful for when you can't use javascript on a site (or don’t want to) – just create a static link to an auto-submit URL instead.
 
 The URL format for submitting a thing is the following:
 (newlines added for better visibility)
@@ -48,7 +48,7 @@ Create a 'Flattr API Documentation' thing. If it already exists a 'Flattr API Do
 Line breaks are added for better visibility.
 
 ```
-https://flattr.dev/submit/auto?user_id=flattr&
+https://flattr.com/submit/auto?user_id=flattr&
   url=http://developers.flattr.net&
   title=Flattr%20API%20Documentation&
   description=Flattr%20API%20Documentation&
@@ -62,7 +62,7 @@ https://flattr.dev/submit/auto?user_id=flattr&
 Line breaks are added for better visibility.
 
 ```html
-<a href="https://flattr.dev/submit/auto?
+<a href="https://flattr.com/submit/auto?
   user_id=flattr&url=http://developers.flattr.net&
   title=Flattr%20API%20Documentation&
   description=Flattr%20API%20Documentation&
@@ -75,4 +75,4 @@ Line breaks are added for better visibility.
 
 Result:
 
-[![Flattr API Documentation](https://api.flattr.com/button/flattr-badge-large.png)](https://flattr.dev/submit/auto?user_id=flattr&url=http://developers.flattr.net&title=Flattr%20API%20Documentation&description=Flattr%20API%20Documentation&language=en_GB&tags=flattr,api,programming&category=text)
+[![Flattr API Documentation](https://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=flattr&url=http://developers.flattr.net&title=Flattr%20API%20Documentation&description=Flattr%20API%20Documentation&language=en_GB&tags=flattr,api,programming&category=text)

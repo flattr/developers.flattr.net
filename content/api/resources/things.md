@@ -30,7 +30,7 @@ GET <%= @config[:api_url]%>/users/:username/things
 - **count** ( _Optional_ ) - Number of records to receive ( default: 30)
 - **page** ( _Optional_ ) - Page of results to retreive ( first page is 1 )
 
-##### Resquest
+##### Request
 ```
 GET <%=@config[:api_url]%>/user/things
 ```

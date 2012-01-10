@@ -30,7 +30,7 @@ And make sure that the RSS-container itself knows of the atom:link-tag:
 
 ### Client support
 
-No clients issupporting Flattr in feeds yet. Work is in progress – will you be the first?
+No clients are supporting Flattr in feeds yet. Work is in progress – will you be the first?
 
 ### Longer version
 

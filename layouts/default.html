@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+
+  <title><%= @item[:title] %> - Flattr Deverlopers</title>
+
+  <link rel="stylesheet" href="/styles/base.css">
+  <link rel="stylesheet" href="/styles/custom.css">
+  <link rel="stylesheet" href="/styles/syntax.css">
+  <link rel="shortcut icon" href="/favicon.ico">
+</head>
+<body>
+  <div class="container">
+    <h1><a href="/">Flattr Developer Platform</a></h1>
+
+    <ul class="nav">
+      <li>
+        <a href="/api">API v2</a>
+        <ul>
+          <li>
+            <span>Resources</span>
+            <ul>
+              <li><a href="/api/resources/things">Things</a></li>
+              <li><a href="/api/resources/flattrs">Flattrs</a></li>
+              <li><a href="/api/resources/users">Users</a></li>
+              <li><a href="/api/resources/categories">Categories</a></li>
+              <li><a href="/api/resources/languages">Languages</a></li>
+            </ul>
+          </li>
+          <li><a href="/api/changelog">Changelog</a></li>
+          <li><a href="/api/libraries">Libraries</a></li>
+        </ul>
+      </li>
+      <li><a href="/button">Embed button</a></li>
+      <li><a href="/auto_submit">Auto Submit URL</a></li>
+      <li><a href="/api/questions">Questions</a></li>
+
+    </ul>
+
+    <div class="page">
+      <div class="header">
+        <h2><%= @item[:title] %></h2>
+        <div class="subtitle"><%= @item[:subtitle] %></div>
+      </div>
+      <%= yield %>
+    </div>
+    <address>Visit <a href="http://flattr.com/">Flattr.com</a> to learn more about about Flattr.</address>
+
+  </div>
+
+  <script src="/js/ender.js"></script>
+  <% if @item.identifier == "/api/questions/" %>
+    <script type="text/javascript">
+      $.domReady(function() {
+        $.ajax({
+          url: 'http://api.stackoverflow.com/1.1/search?tagged=flattr&pagesize=5&jsonp=?', 
+          type: 'jsonp',
+          jsonpCallback: "jsonp",
+          success: function( resp ) {
+            for(var i=0;i<resp.questions.length;i=i+1) {
+            $('#questions_list')
+            .append('<div class="question"><a target="_blank" href="http://stackoverflow.com'+resp.questions[i].question_answers_url+'">'+resp.questions[i].title+'</a><br/><span class="light"> asked by <a href="http://stackoverflow.com/users/'+resp.questions[i].owner.user_id+'" target="_blank">'+resp.questions[i].owner.display_name+'</a></span></div>');
+            }
+          }
+        });
+      });
+    </script>
+  <% end %>
+</body>
+</html>

@@ -1,0 +1,12 @@
+source 'http://rubygems.org'
+gem 'nanoc'
+gem 'pygments.rb'
+gem 'adsf'
+gem 'yajl-ruby'
+gem 'nokogiri'
+gem 'redcarpet', ">=2.0.0"
+gem 'systemu'
+gem 'fssm'
+gem 'rb-fsevent'
+gem 'foreman'
+gem 'builder'

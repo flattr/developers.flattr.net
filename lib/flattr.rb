@@ -234,7 +234,7 @@ module Flattr
       })
 
       SEARCH = {
-        "totalItems" =>  1,
+        "total_items" =>  1,
         "items" =>  1,
         "page" =>  1,
         "things" =>  [

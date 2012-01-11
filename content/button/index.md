@@ -251,3 +251,7 @@ The method is called `FlattrLoader.addLoadEvent()` and it takes one parameter, a
 /* ]]> */
 </script>
 ```
+
+### Browser support
+
+The buttons should support all modern browsers like the latest version of Firefox, Safari and Chrome and also Internet Explorer 8 and newer.

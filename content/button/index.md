@@ -254,4 +254,4 @@ The method is called `FlattrLoader.addLoadEvent()` and it takes one parameter, a
 
 ### Browser support
 
-The buttons should support all modern browsers like the latest version of Firefox, Safari and Chrome and also Internet Explorer 8 and newer.
+The buttons should support all modern browsers like the latest version of Firefox, Safari and Chrome and also Internet Explorer 8 and newer. It will degrade nicely in older browsers like Internet Explorer 7 – it will just not show.

@@ -1,6 +1,5 @@
 ---
 title: Flattr in feeds
-nav: main
 ---
 ### Introduction
 
@@ -13,13 +12,13 @@ We recommend adding payment links, using a standard payment relation, that point
 In an Atom feed add something like this to either the feed itself or to an entry:
 
 ```xml
-<link rel="payment" href="https://flattr.com/submit/auto?url=https%3A%2F%2Fdevelopers.flattr.net%2F&amp;uid=flattr" type="text/html" />
+<link rel="payment" href="https://flattr.com/submit/auto?url=https%3A%2F%2Fdevelopers.flattr.net%2F&amp;user_id=flattr" type="text/html" />
 ```
 
 In an item in a RSS feed add:
 
 ```xml
-<atom:link rel="payment" href="https://flattr.com/submit/auto?url=https%3A%2F%2Fdevelopers.flattr.net%2F&amp;uid=flattr" type="text/html" />
+<atom:link rel="payment" href="https://flattr.com/submit/auto?url=https%3A%2F%2Fdevelopers.flattr.net%2F&amp;user_id=flattr" type="text/html" />
 ```
 
 And make sure that the RSS-container itself knows of the atom:link-tag:

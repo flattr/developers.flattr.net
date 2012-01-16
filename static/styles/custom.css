@@ -24,6 +24,11 @@ h3 {
   color: #fff;
 }
 
+#robot {
+  width: 320px;
+  float: right;
+}
+
 h1 {
 	min-height: 32px;
 	font-size: 28px;

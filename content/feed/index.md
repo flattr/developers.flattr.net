@@ -5,7 +5,7 @@ title: Flattr in feeds
 
 If you want to include Flattr in your RSS or Atom feeds then this is the recommended way for doing so. Including Flattr in a feed can be useful for podcasts and similar but the same method can also be used in other scenarios.
 
-We recommend adding payment links, using a standard payment relation, that points to [auto-submit URL:s](/auto_submit/) for the things you want to be flattrable. You could add these payment links to both the feed itself and its entries.
+We recommend adding payment links, using a standard payment relation, that points to [auto-submit URL:s](/auto-submit/) for the things you want to be flattrable. You could add these payment links to both the feed itself and its entries.
 
 ### Example
 
@@ -37,6 +37,6 @@ What is this standard payment relation that we suggest you to use? It's the one 
 
 The "[Web Linking](http://tools.ietf.org/html/rfc5988)" standard defines a common link relations registry for Atom-feeds, HTML-documents, HTTP Link-headers etc. - thus this method isn't strictly limited to feeds, but feeds are the primary use case that we see.
 
-With [auto-submit URL:s](/auto_submit/) as payment-links all clients already supporting payment-relations will automatically support Flattr links, but clients that wants to do Flattr specific integrations can also do so.
+With [auto-submit URL:s](/auto-submit/) as payment-links all clients already supporting payment-relations will automatically support Flattr links, but clients that wants to do Flattr specific integrations can also do so.
 
-Eg. mobile clients that wants a better UX-flow for Flattr can implement such by checking payment-links for [auto-submit URL:s](/auto_submit/) (links starting with "https://flattr.com/submit/auto") and use those URL:s for the API resources [/things/lookup](/api/resources/things/#check-if-a-thing-exists) and [/flattr](/api/resources/flattrs/#flattr-a-autosubmit-url) to get more info about them or to flattr them.
+Eg. mobile clients that wants a better UX-flow for Flattr can implement such by checking payment-links for [auto-submit URL:s](/auto-submit/) (links starting with "https://flattr.com/submit/auto") and use those URL:s for the API resources [/things/lookup](/api/resources/things/#check-if-a-thing-exists) and [/flattr](/api/resources/flattrs/#flattr-a-autosubmit-url) to get more info about them or to flattr them.

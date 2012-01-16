@@ -53,7 +53,7 @@ POST <%= @config[:api_url] %>/things/:id/flattr
 
 **Scope required**: flattr
 
-The flattr resource can flattr URL:s. If the URL is an [auto-submit URL](/auto_submit) then the thing it's refering to is flattred instead and created if not existing.
+The flattr resource can flattr URL:s. If the URL is an [auto-submit URL](/auto-submit) then the thing it's refering to is flattred instead and created if not existing.
 
 ##### Request
 ```

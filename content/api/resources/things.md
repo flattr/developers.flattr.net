@@ -77,7 +77,7 @@ GET <%= @config[:api_url] %>/things/lookup/?url=:url
 
 The lookup resource can now lookup autosubmit URLs, you will need to url
 encode the data you pass into the `url` parameter. For more information
-check out the [auto submit documentation](/auto_submit).
+check out the [auto submit documentation](/auto-submit).
 
 ```
 GET <%=@config[:api_url]%>/things/lookup/?url=http://flattr.com/submit/auto?url=http://blog.flattr.net/2011/10/api-v2-beta-out-whats-changed/&user_id=flattr

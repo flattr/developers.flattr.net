@@ -1,5 +1,5 @@
 ---
-title: API v2
+title: REST API v2
 subtitle: Documentation for the second iteration of our REST API
 nav: main
 nav_name: api

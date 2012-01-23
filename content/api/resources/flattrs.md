@@ -63,7 +63,7 @@ The flattr resource can flattr URL:s. If the URL is an [auto-submit URL](/auto-s
 ```
 POST <%=@config[:api_url]%>/flattr
 ```
-<%= json({:url => "http%3A%2F%2Fflattr.com%2Fsubmit%2Fauto%3Furl%3Dhttp%253A%252F%252Fblog.flattr.net%252F2011%252F10%252Fapi-v2-beta-out-whats-changed%252F"}) %>
+<%= json({:url => "http://flattr.com/submit/auto?url=http%3A%2F%2Fblog.flattr.net%2F2011%2F10%2Fapi-v2-beta-out-whats-changed%2F&user_id=flattr"}) %>
 
 ##### Example response to autosubmit URL
 

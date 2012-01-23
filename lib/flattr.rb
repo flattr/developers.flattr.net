@@ -134,7 +134,8 @@ module Flattr
 
       FLATTR_CREATE = {
         "message" => "ok",
-        "description" => "Thing was successfully flattred"
+        "description" => "Thing was successfully flattred",
+        "location" => "https://api.flattr.com/rest/v2/things/423405"
       }
 
       ACTIVITIES =

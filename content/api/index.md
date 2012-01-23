@@ -40,7 +40,8 @@ To get a token you need to use the [authorization code flow](http://tools.ietf.o
 - **redirect_uri** ( _Optional_ ) -  The callback URL supplied when creating
   the application. It needs to be identical or else the authentication
   will fail.
-- **scope** ( _Optional_ ) - [Available scopes](#scopes))
+- **scope** ( _Optional_ ) - [Available scopes](#scopes) Separate
+  scopes with spaces.
 
 (Extra line breaks are for display purposes only)
 
@@ -57,7 +58,7 @@ access token.
 ### Request an access token
 
 To get hold of a access token you need to exchange your code for a
-working token. 
+working token.
 
 POST the `code` to the token endpoint and authorize using BASIC Auth
 created from your `client_id` and `client_secret`
@@ -104,9 +105,24 @@ draft](http://tools.ietf.org/html/draft-ietf-oauth-v2-bearer-08).
 
 ## Scopes
 
+##### Available scopes
+
 - **flattr** - Flattr things
 - **thing** - Create things
 - **extendedread** - Read private user attributes and find hidden things
+
+You can request several scopes when authorizing a user by separating
+them with spaces ` `.
+
+##### Example
+
+```
+GET <%= @config[:authorization_url] %>?response_type=code&
+client_id=1234&
+redirect_uri=http://localhost&
+scope=flattr%20thing
+```
+
 
 ## Response Formats
 

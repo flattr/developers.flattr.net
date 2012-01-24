@@ -46,13 +46,18 @@ GET <%=@config[:api_url]%>/user/things
 GET <%=@config[:api_url]%>/things/:id
 ```
 
-##### Example response when resource owner owns the thing
-<%=headers(200)%>
-<%=json(:thing_full)%>
+##### Example response without an access token (public)
+<%= headers(200)%>
+<%= json(:thing_public)%>
+
 
 ##### Example response when resource owner don't own the thing
 <%= headers(200)%>
 <%= json(:thing)%>
+
+##### Example response when resource owner owns the thing
+<%=headers(200)%>
+<%=json(:thing_full)%>
 
 #### Check if a thing exists
 

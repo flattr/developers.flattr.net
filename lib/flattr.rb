@@ -55,7 +55,7 @@ module Flattr
         #"<pre><code class=\"language-javascript\">" + JSON.pretty_generate(hash) + "</code></pre>"
       end
 
-      THING = {
+      THING_PUBLIC = {
         "type" => "thing",
         "resource" => "https://api.flattr.com/rest/v2/things/423405",
         "link" => "https://flattr.com/thing/423405",
@@ -79,10 +79,15 @@ module Flattr
         "title" => "API v2 beta out - what's changed?"
       }
 
-      THING_FULL = THING.merge({
+      THING_FULL = THING_PUBLIC.merge({
         "last_flattr_at" => 1320262599,
         "updated_at" => 0,
-        "flattrs_current_period" => 0
+        "flattrs_current_period" => 0,
+        "flattred" => false
+      })
+
+      THING =  THING_PUBLIC.merge({
+        "flattred" => false
       })
 
       THING_LOOKUP = {

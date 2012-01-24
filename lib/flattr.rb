@@ -70,6 +70,7 @@ module Flattr
           "username" => "flattr"
         },
         "hidden" => false,
+        "image" => "http://flattr.com/thing/image/4/2/3/4/0/5/medium.png",
         "created_at" => 1319704532,
         "tags" => [
           "api"
@@ -243,36 +244,7 @@ module Flattr
         "total_items" =>  1,
         "items" =>  1,
         "page" =>  1,
-        "things" =>  [
-          {
-              "type" =>  "thing",
-              "resource" =>  "https://api.flattr.com/rest/v2/things/450287",
-              "link" =>  "https://flattr.com/thing/450287",
-              "id" =>  450287,
-              "url" =>  "https://github.com/simon/flattr",
-              "language" =>  "en_GB",
-              "category" =>  "software",
-              "owner" =>  {
-                  "type" =>  "user",
-                  "resource" =>  "https://api.flattr.com/rest/v2/users/smgt",
-                  "link" =>  "https://flattr.com/profile/smgt",
-                  "username" =>  "smgt"
-              },
-              "hidden" =>  false,
-              "created_at" =>  1323614098,
-              "tags" =>  [
-                  "gem",
-                  "ruby",
-                  "programming",
-                  "opensource",
-                  "flattr",
-                  "api"
-              ],
-              "flattrs" =>  3,
-              "description" =>  "A ruby gem wrapping Flattrs API.",
-              "title" =>  "Ruby gem wrapping Flattrs API"
-          }
-        ]
+        "things" =>  [THING_PUBLIC]
       }
 
     end

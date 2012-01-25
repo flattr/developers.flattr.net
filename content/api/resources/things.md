@@ -127,7 +127,6 @@ POST <%= @config[:api_url]%>/things
 To work around this problem you should do a POST request instead of an
 PATCH and include the parameter ``_method`` with with the value
 ``patch``.
-{: .error}
 
 *[Authentication](#authenticated_call) needed*
 

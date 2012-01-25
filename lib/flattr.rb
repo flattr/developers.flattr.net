@@ -117,22 +117,22 @@ module Flattr
         "type" => "flattr",
         "thing" => {
           "type" => "thing",
-          "resource" => "https://api.flattr.local/rest/v2/things/313733",
-          "link" => "https://flattr.local/things/313733",
+          "resource" => "https://api.flattr.com/rest/v2/things/313733",
+          "link" => "https://flattr.com/things/313733",
           "id" => 313733,
           "url" => "https://flattr.com/profile/gnuproject",
           "title" => "GNU's not Unix!",
           "owner" => {
             "type" => "user",
-            "resource" => "https://api.flattr.local/rest/v2/users/gnuproject",
-            "link" => "https://flattr.local/user/gnuproject",
+            "resource" => "https://api.flattr.com/rest/v2/users/gnuproject",
+            "link" => "https://flattr.com/user/gnuproject",
             "username" => "gnuproject"
           }
         },
         "owner" => {
           "type" => "user",
-          "resource" => "https://api.flattr.local/rest/v2/users/qzio",
-          "link" => "https://flattr.local/user/qzio",
+          "resource" => "https://api.flattr.com/rest/v2/users/qzio",
+          "link" => "https://flattr.com/user/qzio",
           "username" => "qzio"
         },
         "created_at" => 1316697578
@@ -141,7 +141,14 @@ module Flattr
       FLATTR_CREATE = {
         "message" => "ok",
         "description" => "Thing was successfully flattred",
-        "location" => "https://api.flattr.com/rest/v2/things/423405"
+        "thing" => {
+          "type" => "thing",
+          "resource" => "https://api.flattr.dev/rest/v2/things/423405",
+          "link" => "https://flattr.dev/thing/423405",
+          "id" => 423405,
+          "url" => "http://blog.flattr.net/2011/10/api-v2-beta-out-whats-changed/",
+          "title" => "API v2 beta out - what's changed?",
+        }
       }
 
       ACTIVITIES =

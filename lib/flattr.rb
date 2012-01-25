@@ -83,7 +83,6 @@ module Flattr
       THING_FULL = THING_PUBLIC.merge({
         "last_flattr_at" => 1320262599,
         "updated_at" => 0,
-        "flattrs_current_period" => 0,
         "flattred" => false
       })
 

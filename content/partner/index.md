@@ -67,7 +67,7 @@ __Parameters:__
 * __thing\_owner\_id__ - The full user identifier specified for the thing - will likely be the one specified by the partner in in Step 1.
 * __thing\_clicks\_total__ - The total amount of clicks after this click happened. (While hooks are likely to be executed in order - don't count on it)
 * __flattrer\_username__ - The username of the user that did the flattr - or empty if the user flattrs anonymously
-* __claim\_url__ - URL to a page on Flattr.com where the user can claim their things
+* __claim\_url__ - URL to a page on Flattr.com where the user can claim their things. If the owner was specified as an e-mail address then append the unhashed e-mail address to the claim url like "/owner/foo@example.com".
 
 ### Partner requirements
 

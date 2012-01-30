@@ -175,12 +175,29 @@ DELETE <%= @config[:api_url]%>/things/:id
 ##### Parameters
 
 - **query** (_Optional_) - string Free text search string
-- **tags** (_Optional_) - string Filter by tags, separate with `,`
+- **tags** (_Optional_) - string Filter by tags, see syntax below
 - **language** (_Optional_) - string Filter by language
 - **category** (_Optional_) - string Filter by category
 - **user** (_Optional_) - string Filter by username
+- **sort** (_Optional_) - string Sort by `trend`, `flattrs` or
+  `relevance` (default)
 - **page** (_Optional_) - integer The result page to show
 - **count** (_Optional_) - integer Number of items per page
+
+##### Tags
+
+Tags support a syntax to do advanced tag lookups. It supports `|` ( OR
+), `!` ( NOT ) and `&` ( AND ). 
+
+**Example:** Search all things containing the tag `game` or `games` but not
+`software` would yield `game | games ! software`.
+
+**Example:** Search all things containing the tags `photo` and `flickr` but
+not any illustrations. `photo & flickr ! illustrations`
+
+Remember to URL encode the tags or else you might be getting problems
+with the ampersand `&`. For example `photos & travel & iphone !flickr`
+would convert to `photos+%26+travel+%26+iphone+!flickr`.
 
 ##### Request
 ```

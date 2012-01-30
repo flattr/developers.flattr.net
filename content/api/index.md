@@ -108,7 +108,7 @@ draft](http://tools.ietf.org/html/draft-ietf-oauth-v2-bearer-08).
 ##### Available scopes
 
 - **flattr** - Flattr things
-- **thing** - Create things
+- **thing** - Create, update and delete things
 - **extendedread** - Read private user attributes and find hidden things
 
 You can request several scopes when authorizing a user by separating

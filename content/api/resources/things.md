@@ -191,6 +191,7 @@ DELETE <%= @config[:api_url]%>/things/:id
 ##### Parameters
 
 - **query** (_Optional_) - string Free text search string
+- **url** (_Optional_) - string Filter by url
 - **tags** (_Optional_) - string Filter by tags, see syntax below
 - **language** (_Optional_) - string Filter by language
 - **category** (_Optional_) - string Filter by category

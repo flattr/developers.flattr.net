@@ -8,6 +8,14 @@ nav: api
 
 #### List an users activities
 
+The default activities are outgoing activities, what the user has done.
+If you instead want to get a users incoming activities set the `type`
+parameter to `incoming`.
+
+##### Parameters
+
+* **type** ( _Optional_ ) - Can be set to `incoming` or `outgoing`, default: `outgoing`
+
 ##### Request
 
 ```
@@ -22,6 +30,10 @@ GET <%= @config[:api_url]%>/users/:username/activities
 #### List a authenticated users activities
 
 *[Authentication](#authenticated_call) needed*
+
+##### Parameters
+
+* **type** ( _Optional_ ) - Can be set to `incoming` or `outgoing`, default: `outgoing`
 
 ##### Request
 

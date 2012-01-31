@@ -80,6 +80,41 @@ module Flattr
         "title" => "API v2 beta out - what's changed?"
       }
 
+      THING_PUBLIC_2 = {
+        "type" => "thing",
+        "resource" => "https://api.flattr.dev/rest/v2/things/450287",
+        "link" => "https://flattr.dev/thing/450287",
+        "id" => 450287,
+        "url" => "https://github.com/simon/flattr",
+        "language" => "en_GB",
+        "category" => "software",
+        "owner" => {
+          "type" => "user",
+          "resource" => "https://api.flattr.dev/rest/v2/users/smgt",
+          "link" => "https://flattr.dev/profile/smgt",
+          "username" => "smgt"
+        },
+        "hidden" => 0,
+        "image" => "",
+        "created_at" => 1323614098,
+        "tags" => [
+          "gem",
+          "ruby",
+          "programming",
+          "opensource",
+          "flattr",
+          "api"
+        ],
+        "flattrs" => 7,
+        "description" => "A ruby gem wrapping Flattrs API.",
+        "title" => "Ruby gem wrapping Flattrs API"
+      }
+
+      THING_MANY = [
+        THING_PUBLIC,
+        THING_PUBLIC_2
+      ]
+
       THING_FULL = THING_PUBLIC.merge({
         "last_flattr_at" => 1320262599,
         "updated_at" => 0,

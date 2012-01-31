@@ -59,6 +59,22 @@ GET <%=@config[:api_url]%>/things/:id
 <%=headers(200)%>
 <%=json(:thing_full)%>
 
+#### Get multiple things
+
+##### Parameters
+
+- **id** ( _Optional_ ) - A list of thing ids you want separated with a
+  comma (`,`).
+
+##### Request
+```
+GET <%=@config[:api_url]%>/things?id=:id,:id
+```
+
+##### Example response
+<%= headers(200)%>
+<%= json(:thing_many) %>
+
 #### Check if a thing exists
 
 ##### Parameters

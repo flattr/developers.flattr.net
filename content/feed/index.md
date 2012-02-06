@@ -29,7 +29,11 @@ And make sure that the RSS-container itself knows of the atom:link-tag:
 
 ### Client support
 
-No clients are supporting Flattr in feeds yet. Work is in progress – will you be the first?
+* [Instacast](http://vemedio.com/products/instacast) / [Instacast HD](vemedio.com/products/instacast-hd): [Announcement](http://www.vemedio.com/blog/posts/instacast-flattr-support) & [Documentation](http://vemedio.com/support/instacast#3.6)
+
+### Provider support
+
+* [WordPress Flattr plugin](http://wordpress.org/extend/plugins/flattr/)
 
 ### Longer version
 

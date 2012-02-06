@@ -29,7 +29,7 @@ And make sure that the RSS-container itself knows of the atom:link-tag:
 
 ### Client support
 
-* [Instacast](http://vemedio.com/products/instacast) / [Instacast HD](vemedio.com/products/instacast-hd): [Announcement](http://www.vemedio.com/blog/posts/instacast-flattr-support) & [Documentation](http://vemedio.com/support/instacast#3.6)
+* [Instacast](http://vemedio.com/products/instacast) / [Instacast HD](http://vemedio.com/products/instacast-hd): [Announcement](http://www.vemedio.com/blog/posts/instacast-flattr-support) & [Documentation](http://vemedio.com/support/instacast#3.6)
 
 ### Provider support
 

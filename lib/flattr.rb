@@ -269,12 +269,9 @@ module Flattr
         "username" => "flattr",
         "firstname" => "Flattr.com",
         "lastname" => "",
-        "city" => "",
-        "zip" => "",
-        "province" => "",
-        "cellphone" => "",
         "avatar" => "",
         "about" => "This is the official Flattr account. We made this site :)",
+        "city" => "",
         "country" => ""
       }
 

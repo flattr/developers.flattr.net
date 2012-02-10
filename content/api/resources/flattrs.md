@@ -65,6 +65,15 @@ POST <%= @config[:api_url] %>/things/:id/flattr
 <%= headers(200) %>
 <%= json(:flattr_create) %>
 
+##### Errors
+
+* `flattr_once` (HTTP 403) - The current user have already flattred
+  the thing
+* `flattr_owner` (HTTP 403) - User is the owner of the thing
+* `no_means` (HTTP 401) - Current user don't have enough means to flattr
+* `not_found` (HTTP 404) - Thing does not exist
+* `invalid_request` (HTTP 400) - Request is not valid
+
 #### Flattr a URL
 
 **Scope required**: flattr
@@ -85,3 +94,12 @@ POST <%=@config[:api_url]%>/flattr
 
 <%= headers(200) %>
 <%= json(:flattr_create) %>
+
+##### Errors
+
+* `flattr_once` (HTTP 403) - The current user have already flattred
+  the thing
+* `flattr_owner` (HTTP 403) - User is the owner of the thing
+* `no_means` (HTTP 401) - Current user don't have enough means to flattr
+* `not_found` (HTTP 404) - Thing does not exist
+* `invalid_request` (HTTP 400) - Request is not valid

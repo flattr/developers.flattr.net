@@ -36,6 +36,22 @@ GET <%= @config[:api_url]%>/user/flattrs
 <%= headers(200) %>
 <%= json(:flattr) {|t| [t]} %>
 
+#### List a things flattrs
+
+##### Parameters
+
+- **count** ( _Optional_ ) - Number of records to receive ( default: 30 )
+- **page** ( _Optional_ ) - Page of results to retreive (first page is 1)
+
+##### Request
+```
+GET <%= @config[:api_url]%>/things/:id/flattrs
+```
+
+##### Example response
+<%= headers(200) %>
+<%= json(:flattr) {|t| [t]} %>
+
 #### Flattr a thing
 
 **Scope required**: flattr

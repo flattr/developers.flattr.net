@@ -123,6 +123,32 @@ redirect_uri=http://localhost&
 scope=flattr%20thing
 ```
 
+## Client errors
+
+When a client side error occur you will get appropriete HTTP status
+code and a body with information about the error.
+
+* `400 Bad Request`
+* `401 Unauthorized`
+* `403 Forbidden`
+* `404 Not Found`
+* `406 Not Acceptable`
+
+##### Example request
+
+```
+GET <%= @config[:api_url] %>/things/nothing_here
+```
+
+
+##### Response
+
+<%= headers(404)%>
+<%= json ({
+    "error"=>  "not_found",
+    "error_description" =>  "The resource was not found",
+    "error_uri" => "https://developers.flattr.net/api"
+}) %>
 
 ## Response Formats
 

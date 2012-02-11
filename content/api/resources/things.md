@@ -197,7 +197,7 @@ DELETE <%= @config[:api_url]%>/things/:id
 - **category** (_Optional_) - string Filter by category
 - **user** (_Optional_) - string Filter by username
 - **sort** (_Optional_) - string Sort by `trend`, `flattrs` (all time),
-  `flattrs_month`, `flattrs_week` or
+  `flattrs_month`, `flattrs_week`, `flattrs_day` or
   `relevance` (default)
 - **page** (_Optional_) - integer The result page to show
 - **count** (_Optional_) - integer Number of items per page

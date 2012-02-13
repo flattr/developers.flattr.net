@@ -9,6 +9,8 @@ Getting started
   * `bundle install`
   * `foreman start`
   * Point your browser to `http://localhost:3000`
+  * Edit files and commit
+  * `rake publish`
 
 Legal
 -----

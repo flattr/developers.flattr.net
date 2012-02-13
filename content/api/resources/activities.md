@@ -27,6 +27,10 @@ GET <%= @config[:api_url]%>/users/:username/activities
 <%= headers(200, {}, "Content-type: application/stream+json") %>
 <%= json(:activities) %>
 
+##### Errors
+
+* `user_not_found` (HTTP 404) - user does not exist
+
 #### List a authenticated users activities
 
 *[Authentication](#authenticated_call) needed*
@@ -45,3 +49,7 @@ GET <%=@config[:api_url]%>/user/activities
 
 <%= headers(200, {}, "Content-type: application/stream+json") %>
 <%= json(:activities) %>
+
+##### Errors
+
+* `unauthorized` (HTTP 401) - invalid credentials (bearer token) supplied

@@ -1,7 +1,5 @@
 ---
 title: Languages
-kind: api-resource
-nav: api
 ---
 
 #### List all available languages

@@ -1,7 +1,5 @@
 ---
 title: Categories
-kind: api-resource
-nav: api
 ---
 
 #### List categories

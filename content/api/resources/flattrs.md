@@ -1,7 +1,5 @@
 ---
 title: Flattrs
-kind: api-resource
-nav: api
 ---
 
 #### List a users flattrs

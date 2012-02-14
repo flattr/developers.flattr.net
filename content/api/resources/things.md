@@ -1,7 +1,5 @@
 ---
 title: Things
-kind: api-resource
-nav: api
 ---
 
 #### List a users things

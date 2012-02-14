@@ -1,8 +1,6 @@
 ---
 title: REST API v2
 subtitle: Documentation for the second iteration of our REST API
-nav: main
-nav_name: api
 ---
 
 This API is newly released and is still in beta. We want your feedback on it to make sure we got everything right and may do some breaking changes where we realize we have made bad design decisions.

@@ -1,7 +1,5 @@
 ---
 title: Users
-kind: api-resource
-nav: api
 ---
 
 #### Get a user

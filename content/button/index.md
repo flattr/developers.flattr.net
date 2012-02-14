@@ -1,6 +1,5 @@
 ---
 title: Embedded buttons
-nav: main
 ---
 ### Introduction
 

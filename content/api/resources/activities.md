@@ -1,7 +1,5 @@
 ---
 title: Activities
-kind: api-resource
-nav: api
 ---
 
 > Only Atom (.atom) and JSON (.as) Activity Streams responses supported

@@ -21,7 +21,7 @@ GET <%= @config[:api_url]%>/users/:username/things
 
 #### List a authenticated users things
 
-*[Authentication](#authenticated_call) needed*
+*[Authorization](/api/#authorization) needed*
 
 ##### Parameters
 
@@ -109,7 +109,7 @@ GET <%=@config[:api_url]%>/things/lookup/?url=http://flattr.com/submit/auto?url=
 
 #### Create a thing
 
-*[Authentication](#authenticated_call) needed*
+*[Authorization](/api/#authorization) needed*
 
 **Scope required**: thing
 
@@ -142,7 +142,7 @@ To work around this problem you should do a POST request instead of an
 PATCH and include the parameter ``_method`` with with the value
 ``patch``.
 
-*[Authentication](#authenticated_call) needed*
+*[Authorization](/api/#authorization) needed*
 
 **Scope required**: thing
 
@@ -170,7 +170,7 @@ PATCH <%= @config[:api_url] %>/things/:id
 
 #### Delete a thing
 
-*[Authentication](#authenticated_call) needed*
+*[Authorization](/api/#authorization) needed*
 
 **Scope required**: thing
 

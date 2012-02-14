@@ -19,7 +19,7 @@ GET <%= @config[:api_url] %>/users/:username
 
 #### Get the authenticated user
 
-*[Authentication](/rest/#authenticated_call) needed*
+*[Authorization](/api/#authorization) needed*
 
 ##### Request
     GET <%= @config[:api_url] %>/user

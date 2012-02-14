@@ -68,7 +68,7 @@ GET <%=@config[:api_url]%>/things/:id
 
 ##### Request
 ```
-GET <%=@config[:api_url]%>/things?id=:id,:id
+GET <%=@config[:api_url]%>/things/:id,:id
 ```
 
 ##### Example response

@@ -15,7 +15,7 @@ GET <%= @config[:api_url] %>/users/:username
 
 ##### Errors
 
-* `user_not_found` (HTTP 404) - user does not exist
+* `not_found` (HTTP 404) - user does not exist
 
 #### Get the authenticated user
 

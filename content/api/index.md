@@ -126,11 +126,15 @@ scope=flattr%20thing
 When a client side error occur you will get appropriete HTTP status
 code and a body with information about the error.
 
-* `400 Bad Request`
-* `401 Unauthorized`
-* `403 Forbidden`
-* `404 Not Found`
-* `406 Not Acceptable`
+* `invalid_request` (400 Bad Request) - Not a valid request
+* `invalid_parameters` (400 Bad Request) - Parameter missing or invalid
+* `unauthorized` (401 Unauthorized) - Unauthorized to access resource
+* `rate_limit_exceeded` (403 Forbidden) - To many request the last hour
+* `invalid_scope` (403 Forbidden) - Scope does not exist
+* `insufficient_scope` (403 Forbidden) - Don't have the scope required to access resource
+* `not_found` (404 Not Found) - Resource was not found
+* `not_acceptable` (406 Not acceptable) - Unknown response format
+
 
 ##### Example request
 

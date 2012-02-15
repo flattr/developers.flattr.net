@@ -166,5 +166,7 @@ specified in
 [rfc2616](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html) OR by
 adding a suffix for the file format to the URL (ex. **categories.xml**).
 
+JSONP is supported by specifying a callback using the **jsonp** query parameter. The API also supports **CORS**, cross-origin resource sharing, for all requests – so JSONP [shouldn't be needed](http://caniuse.com/#search=cors) in most modern browsers.
+
 When using POST, PATCH or PUT **application/json** and
-**application/x-www-form-urlencoded** are valid formats.
+**application/x-www-form-urlencoded** are valid formats of the request's own content.

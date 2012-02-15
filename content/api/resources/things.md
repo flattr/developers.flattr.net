@@ -183,6 +183,9 @@ DELETE <%= @config[:api_url]%>/things/:id
 <%= headers(204) %>
 <pre class="highlight"><code></code></pre>
 
+#### Errors
+
+* `forbidden` (403 Forbidden) - Cannot delete thing
 
 #### Search things
 

@@ -9,3 +9,4 @@ This is a list of code libraries that interact with the Flattr API. If you think
 * PHP - [flattr-client](https://github.com/flattr/php-flattr-client)
 * Objective C - [FlattrKit](https://github.com/neonichu/FlattrKit)
 * Javascript - [Flattr.js](https://github.com/simme/flattrjs)
+* Perl - [WebService-Flattr](https://metacpan.org/release/WebService-Flattr)

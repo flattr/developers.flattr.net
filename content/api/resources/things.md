@@ -48,6 +48,10 @@ GET <%=@config[:api_url]%>/things/:id
 <%= headers(200)%>
 <%= json(:thing_public)%>
 
+##### Errors
+
+* `not_found` (HTTP 404) - the thing can not be found
+
 
 ##### Example response when resource owner don't own the thing
 <%= headers(200)%>
@@ -134,6 +138,15 @@ POST <%= @config[:api_url]%>/things
 ##### Example response
 <%=headers(201) %>
 <%=json(:thing_create) %>
+
+##### Errors
+
+* `bad_request` (400) bad request, invalid parameters
+
+example error when an invalid url is submitted
+
+<%= headers(400) %>
+<%=json({:error => "validation", :error_description => "Invalid url",:error_uri => "http:\/\/developers.flattr.net\/api"})%>
 
 #### Update a thing
 

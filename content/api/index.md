@@ -154,14 +154,14 @@ GET <%= @config[:api_url] %>/things/nothing_here
 
 ## Response Formats
 
-- **application/json** ( _Default_ )
-- **text/xml**
-- **application/yaml**
+- **application/json** - .json ( _Default_ )
+- **text/xml** - .xml
+- **application/yaml** - .yaml
 
 [Activity Streams](http://activitystrea.ms/) feeds are available for some resource, like **flattr**, **things** and **activities**.
 
-- **application/stream+json** - defined in this [specification](http://activitystrea.ms/specs/json/1.0/)
-- **application/atom+xml** - defined in this [specification](http://activitystrea.ms/specs/atom/1.0/)
+- **application/stream+json** - .as - defined in this [specification](http://activitystrea.ms/specs/json/1.0/)
+- **application/atom+xml** - .atom - defined in this [specification](http://activitystrea.ms/specs/atom/1.0/)
 
 Default response format is **application/json**.
 

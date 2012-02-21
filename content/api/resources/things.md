@@ -198,7 +198,7 @@ DELETE <%= @config[:api_url]%>/things/:id
 
 #### Errors
 
-* `forbidden` (403 Forbidden) - Cannot delete thing
+* `forbidden` (403 Forbidden) - Cannot delete the thing. Maby it's not you thing or the scope `thing` is missing.
 
 #### Search things
 

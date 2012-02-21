@@ -141,7 +141,7 @@ POST <%= @config[:api_url]%>/things
 
 ##### Errors
 
-* `bad_request` (400) bad request, invalid parameters
+* `validation` (400 Bad Request) - The information you submitted did not validate
 
 example error when an invalid url is submitted
 

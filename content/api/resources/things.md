@@ -50,8 +50,7 @@ GET <%=@config[:api_url]%>/things/:id
 
 ##### Errors
 
-* `not_found` (HTTP 404) - the thing can not be found
-
+* `not_found` (404 Not Found) - the thing can not be found
 
 ##### Example response when resource owner don't own the thing
 <%= headers(200)%>

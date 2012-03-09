@@ -8,6 +8,7 @@ title: Flattrs
 
 - **count** ( _Optional_ ) - Number of records to receive ( default: 30 )
 - **page** ( _Optional_ ) - Page of results to retreive (first page is 1)
+- **full** ( _Optional_ ) - Receive full thing and user objects instead of small
 
 ##### Request
 ```
@@ -24,6 +25,7 @@ GET <%= @config[:api_url]%>/users/:username/flattrs
 
 - **count** ( _Optional_ ) - Number of records to receive
 - **page** ( _Optional_ ) - Page of results to retreive
+- **full** ( _Optional_ ) - Receive full thing and user objects instead of small
 
 ##### Request
 ```
@@ -40,6 +42,7 @@ GET <%= @config[:api_url]%>/user/flattrs
 
 - **count** ( _Optional_ ) - Number of records to receive ( default: 30 )
 - **page** ( _Optional_ ) - Page of results to retreive (first page is 1)
+- **full** ( _Optional_ ) - Receive full thing and user objects instead of small
 
 ##### Request
 ```

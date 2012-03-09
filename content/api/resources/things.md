@@ -8,6 +8,7 @@ title: Things
 
 - **count** ( _Optional_ ) - Number of records to receive ( default: 30 )
 - **page** ( _Optional_ ) - Page of results to retreive ( first page is 1 )
+- **full** ( _Optional_ ) - Receive full user object instead of small
 
 ##### Request
 ```
@@ -27,6 +28,7 @@ GET <%= @config[:api_url]%>/users/:username/things
 
 - **count** ( _Optional_ ) - Number of records to receive ( default: 30)
 - **page** ( _Optional_ ) - Page of results to retreive ( first page is 1 )
+- **full** ( _Optional_ ) - Receive full user object instead of small
 
 ##### Request
 ```
@@ -38,6 +40,10 @@ GET <%=@config[:api_url]%>/user/things
 <%= json(:thing) {|t| [t]} %>
 
 #### Get a thing
+
+##### Parameters
+
+- **full** ( _Optional_ ) - Receive full user object instead of small
 
 ##### Request
 ```
@@ -66,6 +72,7 @@ GET <%=@config[:api_url]%>/things/:id
 
 - **id** ( _Optional_ ) - A list of thing ids you want separated with a
   comma (`,`).
+- **full** ( _Optional_ ) - Receive full user object instead of small
 
 ##### Request
 ```
@@ -214,6 +221,7 @@ DELETE <%= @config[:api_url]%>/things/:id
   `relevance` (default)
 - **page** (_Optional_) - integer The result page to show
 - **count** (_Optional_) - integer Number of items per page
+- **full** ( _Optional_ ) - Receive full user object instead of small
 
 ##### Tags
 

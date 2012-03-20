@@ -27,7 +27,7 @@ GET <%= @config[:api_url]%>/users/:username/activities
 
 ##### Errors
 
-* `not_found` (404 not_found) - The requested user could not be found
+* `not_found` (404 Not Found) - The requested user could not be found
 
 #### List a authenticated users activities
 

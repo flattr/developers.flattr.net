@@ -27,7 +27,7 @@ GET <%= @config[:api_url]%>/users/:username/activities
 
 ##### Errors
 
-* `user_not_found` (HTTP 404) - user does not exist
+* `not_found` (404 not_found) - The requested user could not be found
 
 #### List a authenticated users activities
 
@@ -50,4 +50,4 @@ GET <%=@config[:api_url]%>/user/activities
 
 ##### Errors
 
-* `unauthorized` (HTTP 401) - invalid credentials (bearer token) supplied
+* `unauthorized` (401 Unauthorized) - You are unauthorized to access the resource (invalid bearer token supplied)

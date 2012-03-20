@@ -45,7 +45,7 @@ GET <%=@config[:api_url]%>/user/things
 
 ##### Errors
 
-* `unauthorized ` (401 Unauthorized) - You are unauthorized to access the resource (no token?)
+* `unauthorized`  (401 Unauthorized) - You are unauthorized to access the resource (no token?)
 
 
 #### Get a thing

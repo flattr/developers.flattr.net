@@ -20,6 +20,10 @@ GET <%= @config[:api_url]%>/users/:username/things
 <%= headers(200) %>
 <%= json(:thing) %>
 
+##### Errors
+
+* `not_found` (404 Not Found) - The requested user could not be found
+
 #### List a authenticated users things
 
 *[Authorization](/api/#authorization) needed*
@@ -38,6 +42,11 @@ GET <%=@config[:api_url]%>/user/things
 ##### Example response
 <%= headers(200) %>
 <%= json(:thing) {|t| [t]} %>
+
+##### Errors
+
+* `unauthorized ` (401 Unauthorized) - You are unauthorized to access the resource (no token?)
+
 
 #### Get a thing
 
@@ -83,6 +92,10 @@ GET <%=@config[:api_url]%>/things/:id,:id
 <%= headers(200)%>
 <%= json(:thing_many) %>
 
+##### Errors
+
+* `not_found` (404 Not Found) - The requested thing(s) could not be found"
+
 #### Check if a thing exists
 
 ##### Parameters
@@ -112,10 +125,15 @@ check out the [auto submit documentation](/auto-submit).
 GET <%=@config[:api_url]%>/things/lookup/?url=http://flattr.com/submit/auto?url=http://blog.flattr.net/2011/10/api-v2-beta-out-whats-changed/&user_id=flattr
 ```
 
+
 ##### Example response to autosubmit URL
 
 <%= headers(302, :Location => @config[:api_url]+"/things/423405") %>
 <%= json(:thing_lookup) %>
+
+##### Errors
+
+* `validation` (400 Bad Request) - Owner mismatch. Current thing owned by other account.
 
 #### Create a thing
 
@@ -186,6 +204,10 @@ PATCH <%= @config[:api_url] %>/things/:id
 ##### Example response
 <%= headers(200) %>
 <%= json(:thing_update) %>
+
+##### Errors
+
+* `validation` (400 Bad Request) - The information you submitted did not validate
 
 #### Delete a thing
 

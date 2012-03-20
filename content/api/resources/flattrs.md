@@ -19,6 +19,11 @@ GET <%= @config[:api_url]%>/users/:username/flattrs
 <%= headers(200) %>
 <%= json(:flattr) {|t| [t]} %>
 
+If the response header is `200 OK` but the response is empty there is two possible reasons. One is that the user have choosen to hide what he/she flattrs. The other is because that user haven't flattred anything yet.
+##### Errors
+
+* `not_found` (404 Not Found) - The requested user could not be found
+
 ####  List the authenticated users flattrs
 
 ##### Parameters
@@ -36,6 +41,10 @@ GET <%= @config[:api_url]%>/user/flattrs
 <%= headers(200) %>
 <%= json(:flattr) {|t| [t]} %>
 
+##### Errors
+
+* `unauthorized ` (401 Unauthorized) - You are unauthorized to access the resource (no token?)
+
 #### List a things flattrs
 
 ##### Parameters
@@ -52,6 +61,10 @@ GET <%= @config[:api_url]%>/things/:id/flattrs
 ##### Example response
 <%= headers(200) %>
 <%= json(:flattr) {|t| [t]} %>
+
+##### Errors
+
+* `unauthorized ` (401 Unauthorized) - You are unauthorized to access the resource (no token?)
 
 #### Flattr a thing
 

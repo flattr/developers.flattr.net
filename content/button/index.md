@@ -38,6 +38,7 @@ For convenience we've also added a few query string parameters to set default pa
 
 * **mode** - auto | manual(default)
 * **https** - 1 | 0 (defaults to the schema of load.js)
+* **popout** - 1 | 0 (show popout when hovering mouse over button)
 * **uid** - username
 * **button** - compact | default
 * **language** - can be set to any of the available languages
@@ -100,6 +101,8 @@ The parameters are a set of key value pairs. Some of them are required, others a
 * **tags** ( Optional) - This parameter allows you to add tags that can be used to describe your thing. This is used on Flattr to allow further filtering and sorting of things. Multiple tags are seperated by a comma `,`. Using non alpha characters in tags are not supported nor is using a comma for obvious reasons.
 
 * **button** ( Optional ) - We also provide a compact version of our Flattr button. This parameter tells the embedded button script which button layout to use. Set this parameter to `compact` if you want the compact button. Don't set the parameter at all if you are fine with the normal button.
+
+* **popout** ( Optional ) - Set this parameter to `0` to disable the popout that appears when hovering the mouse cursor over the button.
 
 * **hidden** ( Optional ) - Not all content is suitable for public listing. If you for one reason or another don't want your content to be listed on Flattr set this parameter to `1`.
 

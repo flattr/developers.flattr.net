@@ -7,5 +7,5 @@ All changes to the API will be posted here. The changes are available as a <a
 </p>
 
 <% sorted_articles.each do |article| %>
-<span class="light"><%= article[:created_at] %></span> - <a href="<%= article.identifier %>"><%= article[:title] %></a><br/>
+<span class="light"><%= article[:created_at].dup %></span> - <a href="<%= article.identifier %>"><%= article[:title] %></a><br/>
 <% end %>

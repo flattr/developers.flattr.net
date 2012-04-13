@@ -77,5 +77,30 @@ Community partner functionality is, due to its implementation, currently limited
 
 * E-mail addresses, MD5 hashed. Eg: `email:05f8b3480b04f6a516bb1a46e556323c`
 * Twitter user ids. Eg. `twitter:user:id:123`
-* _(upcoming)_ Facebook user ids. Eg. `facebook:user:id:123`
-* _(upcoming)_ SoundCloud user ids. Eg. `soundcloud:user:id:123`
+* Partner ids. Eg. `partner:namespace:123`
+
+### Verifying custom identifiers
+
+If we have arranged it so that you can verify that a given Flattr account is owned by a user on your system, you can use a simple API call to associate the two accounts. This will make all pending things associated with the user on your system to automatically be claimed by the Flattr account.
+
+##### Parameters
+
+- **identity** - The URI that you want to associate with the Flattr account, e.g. "partner:namespace:123" where "123" is e.g. the ID number of a user on your system. Contact us if you do not know what your partner namespace is.
+
+##### Request
+```
+POST <%= @config[:api_url]%>/users/:username/verify
+```
+
+##### Verify an authenticated user
+```
+POST <%= @config[:api_url]%>/user/verify
+```
+
+##### Example response
+
+<%= headers(200) %>
+
+##### Errors
+
+* `unauthorized`  (401 Unauthorized) - You are either not logged in, are providing an invalid identifier, or are not allowed to verify the provided identifier.

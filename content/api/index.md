@@ -33,7 +33,7 @@ To use OAuth 2 you need to [register their application](http://flattr.com/apps) 
 
 To get a token you need to use the [authorization code flow](http://tools.ietf.org/html/draft-ietf-oauth-v2-21#section-4.1).
 
-- **response_type** ( _Required_ ) - This can be set to `code` or `access_token`
+- **response_type** ( _Required_ ) - This can be set to `code` or `token`
 - **client_id** ( _Required_ ) - The client_id found at http://flattr.com/apps
 - **redirect_uri** ( _Optional_ ) -  The callback URL supplied when creating
   the application. It needs to be identical or else the authentication

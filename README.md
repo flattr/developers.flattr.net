@@ -10,10 +10,10 @@ Getting started
   * If you don't have bundler install it. `gem install bundler`
   * `bundle install`
   * `easy_install pygments`
-  * `foreman start`
+  * `bundle exec foreman start`
   * Point your browser to `http://localhost:3000`
   * Edit files and commit
-  * `rake publish`
+  * `bundle exec rake publish`
 
 Legal
 -----

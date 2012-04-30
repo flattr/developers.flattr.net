@@ -1,5 +1,5 @@
 ---
-title: Partner Site Integration
+title: Partner site integration
 ---
 
 If you are Flattr partner and you have received a partner key you can use this documentation..

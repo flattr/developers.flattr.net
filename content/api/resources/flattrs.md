@@ -92,11 +92,23 @@ POST <%= @config[:api_url] %>/things/:id/flattr
 
 **Scope required**: flattr
 
-The flattr resource can flattr URL:s. If the URL is an [auto-submit URL](/auto-submit) then the thing it's referring to is created if it does not already exist and then flattred. For this to work you will need to URL encode the `url` parameter in the auto-submit URL ( in the example `http://blog.flattr.net/2011/10/api-v2-beta-out-whats-changed/` ) and then the URL will look like `http://flattr.com/submit/auto?url=http%3A%2F%2Fblog.flattr.net%2F2011%2F10%2Fapi-v2-beta-out-whats-changed%2F&user_id=flattr`.
+The flattr resource flattrs flattrable URL:s. Flattrable URL:s are those already registered with Flattr, those that we support discovering ownership data of and those contained within an [auto-submit URL](/auto-submit) together with the metadata needed to register a new thing.
+
+##### Discoverable URL:s
+
+We support discovering ownership data from these URL:s.
+
+* **GitHub** profiles, repositories, commits and gists that isn't owned by an organization.
+* **SoundCloud** profiles, tacks and sets.
+* **Twitter** profiles and tweets.
+
+##### Auto-submit URL:s
+
+An [auto-submit URL](/auto-submit) contains all necessary metadata for a thing. If the URL in an auto-submit URL isn't registered on Flattr, then it will be created before being then flattred. Auto-submit URL:s are recommended for use in eg. [feeds](/feed/) and looks like this: `http://flattr.com/submit/auto?url=http%3A%2F%2Fblog.flattr.net%2F2011%2F10%2Fapi-v2-beta-out-whats-changed%2F&user_id=flattr`.
 
 ##### Parameters
 
-- **url** ( _Required_ ) - A auto-submit URL to flattr
+- **url** ( _Required_ ) - The URL to flattr or an [auto-submit URL](/auto-submit) containing the URL to flattr
 
 ##### Request
 ```

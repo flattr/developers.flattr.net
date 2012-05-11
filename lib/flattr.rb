@@ -158,6 +158,7 @@ module Flattr
           "url" => "https://flattr.com/profile/gnuproject",
           "title" => "GNU's not Unix!",
           "image" => "https://flattr.com/thing/image/3/1/3/7/3/3/medium.png",
+          "flattrs" => 3,
           "owner" => {
             "type" => "user",
             "resource" => "https://api.flattr.com/rest/v2/users/gnuproject",
@@ -182,6 +183,7 @@ module Flattr
           "resource" => "https://api.flattr.dev/rest/v2/things/423405",
           "link" => "https://flattr.dev/thing/423405",
           "id" => 423405,
+          "flattrs" => 3,
           "url" => "http://blog.flattr.net/2011/10/api-v2-beta-out-whats-changed/",
           "title" => "API v2 beta out - what's changed?",
           "image" => "https://flattr.com/thing/image/4/2/3/4/0/5/medium.png",

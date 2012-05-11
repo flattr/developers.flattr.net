@@ -4,6 +4,7 @@ gem 'pygments.rb'
 gem 'yajl-ruby'
 gem 'redcarpet', ">=2.0.0"
 gem 'builder'
+gem 'rake'
 
 group :development do
   gem 'adsf'

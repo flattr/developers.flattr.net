@@ -22,7 +22,7 @@ The first step of in using the embedded button is loading it. The url to the jav
 
     s.type = 'text/javascript';
     s.async = true;
-    s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+    s.src = '//api.flattr.com/js/0.6/load.js?mode=auto';
 
     t.parentNode.insertBefore(s, t);
  })();
@@ -68,7 +68,7 @@ Note that the query string parameters are added to the `load.js` url and not to 
 
         s.type = 'text/javascript';
         s.async = true;
-        s.src = 'http://api.flattr.com/js/0.6/load.js?'+
+        s.src = '//api.flattr.com/js/0.6/load.js?'+
                 'mode=auto&uid=gargamel&language=sv_SE&category=text';
 
         t.parentNode.insertBefore(s, t);

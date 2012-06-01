@@ -1,6 +1,9 @@
 ---
-title: Integrate Flattr
+title: Flattr tools
 ---
+
+There are several extensions and resources making it easier to integrate Flattr on your blog, podcast, mobile application and such. On this page we try to collect them all. If you think there 
+are tools missing feel free to [send us a link](https://flattr.com/contact) or make a [pull-request](https://github.com/flattr/developers.flattr.net).
 
 ### Blogs
 <img src="http://www.dotnetblogengine.net/themes/arthemia/images/favicon.ico" width="16" height="16">&nbsp;[BlogEngine.NET Extension](http://blog.geniali.ch/?tag=/GEBEEFlattr )   

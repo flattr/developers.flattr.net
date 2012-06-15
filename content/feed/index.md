@@ -1,41 +1,51 @@
 ---
-title: Flattr in feeds
+title: Flattr in feeds and HTML
 ---
 ### Introduction
 
-If you want to include Flattr in your RSS or Atom feeds then this is the recommended way for doing so. Including Flattr in a feed can be useful for podcasts and similar but the same method can also be used in other scenarios.
+If you want to make Flattr discoverable in your RSS or Atom feeds or in your HTML then this is the recommended way for doing so.
+
+Making Flattr discoverable in a feed is useful for eg. podcatchers and in HTML it is useful for eg. browser extensions. The method described in here is not limited to feeds and HTML - it can often be used in other formats as well.
 
 ### Shorter version
 
-You include Flattr in your feeds by adding payment links, using the standard *payment* relation, to your feed entries that you point directly to (*without any redirects*) [auto-submit URL:s](/auto-submit/) for those feed entries.
+You include Flattr in your feeds and HTML by adding payment links, using the standard *payment* relation, to your feed, feed entries or HTML-head that you point directly to (*without any redirects*) the [auto-submit URL:s](/auto-submit/) for that content.
 
 #### Example
 
-In an Atom feed add something like this to an entry:
+In an **Atom feed** add something like this to an entry:
 
 ```xml
 <link rel="payment" href="https://flattr.com/submit/auto?url=https%3A%2F%2Fdevelopers.flattr.net%2F&amp;user_id=flattr" type="text/html" />
 ```
 
-In an item in a RSS feed add this instead:
+In an item in a **RSS feed** add this instead:
 
 ```xml
 <atom:link rel="payment" href="https://flattr.com/submit/auto?url=https%3A%2F%2Fdevelopers.flattr.net%2F&amp;user_id=flattr" type="text/html" />
 ```
 
-And in a RSS feed also make sure that the RSS-container itself knows of the atom:link-tag by adding the atom-namespace:
+And in a **RSS feed** also make sure that the RSS-container itself knows of the atom:link-tag by adding the atom-namespace:
 
 ```xml
 <rss xmlns:atom="http://www.w3.org/2005/Atom">
 ```
 
+In **HTML** add something like this to the head-tag of the document:
+
+```html
+<link rel="payment" href="https://flattr.com/submit/auto?url=https%3A%2F%2Fdevelopers.flattr.net%2F&amp;user_id=flattr" type="text/html" />
+```
+
 ### Client support
 
-* [Podkicker Pro Podcast Player](https://play.google.com/store/apps/details?id=com.podkicker)
+* [Podkicker Pro Podcast Player](https://play.google.com/store/apps/details?id=com.podkicker) (Support for feeds)
+* [Flattr Chrome Extension](https://chrome.google.com/webstore/detail/opjnhfkbdoopgfbefgbdkpjnbghffmln) (Support for HTML)
+* _Soon:_ [Flattr Firefox Add-on](https://addons.mozilla.org/firefox/addon/flattr/) (Support for HTML)
 
 ### Provider support
 
-* [WordPress Flattr plugin](http://wordpress.org/extend/plugins/flattr/)
+* [WordPress Flattr plugin](http://wordpress.org/extend/plugins/flattr/) (Support for feeds and HTML)
 
 ### Longer version
 

@@ -51,7 +51,7 @@ are tools missing feel free to [send us a link](https://flattr.com/contact) or m
 <img src="http://www.android.com/favicon.ico" width="16" height="16">&nbsp;[Android: HowTo get Flattr in apps](http://www.dafer45.com/android/for_developers/including_a_flattr_button_in_an_application.html )   
 <img src="https://www.google.com/images/icons/product/chrome-16.png" width="16" height="16">&nbsp;[Fast Flattr](https://chrome.google.com/webstore/detail/opjnhfkbdoopgfbefgbdkpjnbghffmln?hl=en)   
 [EasyLink V3 Plugin](http://www.mountaingrafix-forum.eu/index.php?page=Thread&threadID=1305)   
-<img src="http://flattr.com/_img/favicon.ico" width="16" height="16">&nbsp;[Offline Flattr](https://flattr.com/support/offline)   
+<img src="http://flattr.com/_img/favicon.ico" width="16" height="16">&nbsp;[Offline Flattr](https://flattr.com/offline)   
 <img src="http://flattirl.com/favicon.png" width="16" height="16">&nbsp;[Flattirl](http://flattirl.com/)   
 <img src="http://github.com/favicon.ico" width="16" height="16">&nbsp;[GitHub](http://blog.flattr.net/2012/02/winter-update-github-tweets-extensions/)   
 <img src="http://www.google.com/favicon.ico" width="16" height="16">&nbsp;[Google Gadget for Project Hosting](http://stefansundin.com/stuff/flattr/)   

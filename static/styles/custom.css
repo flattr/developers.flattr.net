@@ -76,6 +76,7 @@ code {
 pre code {
 	border: 0;
 	background-color: none;
+  padding: 0;
 }
 
 .highlight {

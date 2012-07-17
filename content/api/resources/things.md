@@ -224,7 +224,7 @@ DELETE <%= @config[:api_url]%>/things/:id
 <%= headers(204) %>
 <pre class="highlight"><code></code></pre>
 
-#### Errors
+##### Errors
 
 * `forbidden` (403 Forbidden) - Cannot delete the thing. Maby it's not you thing or the scope `thing` is missing.
 

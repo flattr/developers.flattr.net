@@ -169,7 +169,7 @@ When using POST, PATCH or PUT **application/json** and
 
 ### Rate limiting
 
-Two headers regarding limit is sent in every response.
+Four headers regarding rate limit is sent in all responses where rate limit is applied.
 
     X-RateLimit-Limit: 1000
     X-RateLimit-Remaining: 999

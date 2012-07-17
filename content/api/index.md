@@ -13,15 +13,6 @@ This API is newly released and is still in beta. We want your feedback on it to 
 
 All resource paths are relative to the API-endpoint.
 
-### Rate limiting
-
-Two headers regarding limit is sent in every response.
-
-    X-RateLimit-Limit: 5000
-    X-RateLimit-Remaining: 4999
-
-X-RateLimit-Limit: is the current max requests.
-X-RateLimit-Remaining is how many requests you have left until you are blocked temporary. When that happens, a *rate_limit_exceeded* error will be returned. Your remaining requests are reseted automatically every hour certain intervall.
 
 ## Authorization
 
@@ -175,3 +166,39 @@ JSONP is supported by specifying a callback using the **jsonp** query parameter.
 
 When using POST, PATCH or PUT **application/json** and
 **application/x-www-form-urlencoded** are valid formats of the request's own content.
+
+### Rate limiting
+
+Two headers regarding limit is sent in every response.
+
+    X-RateLimit-Limit: 1000
+    X-RateLimit-Remaining: 999
+    X-RateLimit-Current: 1
+    X-RateLimit-Reset: 1342521939
+
+`X-RateLimit-Limit` - Current rate limit.   
+`X-RateLimit-Remaining` - Requests left during the current period.   
+`X-RateLimit-Current` - Requests you have made during the current period.   
+`X-RateLimit-Reset` - When your period ends you get new request. It's a unix timestamp.   
+
+When you exceed your rate limit a `rate_limit_exceeded` error will be returned on all rate limited resources. Your requests are **reset every hour**.
+
+There is also a resourse where you can check the current rate limit (this resource is not rate limited).
+
+##### Example request
+
+```
+GET <%= @config[:api_url] %>/rate_limit
+```
+
+
+##### Response
+
+<%= headers(200, {}, {:rate_limit => false})%>
+<%= json ({
+  "hourly_limit" => 1000,
+  "remaining_hits" => 986,
+  "current_hits"=>14,
+  "reset_time_in_seconds"=>1342521939,
+  "reset_time"=>"Tue, 17 Jul 2012 10:45:39 +0000 GMT"
+}) %>

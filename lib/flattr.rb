@@ -23,19 +23,33 @@ module Flattr
         500 => '500 Server Error'
       }
 
-      def headers(status, headers = {}, contentType = "")
+      def headers(status, headers = {}, opts = {})
+
         css_class = "headers"
-        lines = ["Status: #{STATUSES[status]}"]
-        if contentType != ""
-          lines << contentType
-        else
-          lines << "Content-type: application/json;charset=utf-8"
-        end
+
+        default_opts = {
+          :rate_limit => true
+        }
+
+        default_headers = {
+          "Content-Type" => "application/json;charset=utf-8"
+        }
+
+        options = default_opts.merge(opts)
+        headers = default_headers.merge(headers)
+
+        lines = ["HTTP/1.1 #{STATUSES[status]}"]
+
         headers.each do |key, value|
           lines << "#{key}: #{value}"
         end
-        lines << "X-RateLimit-Limit: 5000"
-        lines << "X-RateLimit-Remaining: 4999"
+
+        if(options[:rate_limit])
+          lines << "X-RateLimit-Limit: 1000"
+          lines << "X-RateLimit-Remaining: 999"
+          lines << "X-RateLimit-Current: 1"
+          lines << "X-RateLimit-Reset: 1342521939"
+        end
 
         %(<pre class="#{css_class}"><code>#{lines * "\n"}</code></pre>\n)
       end

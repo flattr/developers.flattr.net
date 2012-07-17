@@ -22,7 +22,7 @@ GET <%= @config[:api_url]%>/users/:username/activities
 
 ##### Example response
 
-<%= headers(200, {}, "Content-type: application/stream+json") %>
+<%= headers(200, "Content-Type" => "application/stream+json") %>
 <%= json(:activities) %>
 
 ##### Errors
@@ -45,7 +45,7 @@ GET <%=@config[:api_url]%>/user/activities
 
 ##### Example response
 
-<%= headers(200, {}, "Content-type: application/stream+json") %>
+<%= headers(200, "Content-Type" => "application/stream+json") %>
 <%= json(:activities) %>
 
 ##### Errors

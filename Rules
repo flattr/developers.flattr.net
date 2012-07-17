@@ -20,6 +20,13 @@ compile '/api/feed/' do
   filter :erb
 end
 
+compile '/api/resources/*' do
+  filter :erb
+  filter :redcarpet2
+  filter :add_toc
+  layout 'default'
+end
+
 compile '*' do
   if item.binary?
     # don’t filter binary items

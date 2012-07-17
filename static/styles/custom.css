@@ -332,3 +332,14 @@ address,
 address a {
   color: #ccc;
 }
+
+#toc ul {
+  margin-top: 1em;
+}
+
+#toc ul li {
+  list-style:none;
+  margin-bottom: 8px;
+
+}
+

@@ -13,7 +13,7 @@ class HTMLwithBlocks < Redcarpet::Render::HTML
       code = Pygments.highlight(code, :lexer => language, :cssclass => "highlight")
     end
   end
-  
+
   def header(text, header_level)
     if header_level < 5
       name = text.downcase.gsub(/\s/, "-").gsub(/![\-a-z]/, "")

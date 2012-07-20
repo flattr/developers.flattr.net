@@ -99,8 +99,9 @@ The flattr resource flattrs flattrable URL:s. Flattrable URL:s are those already
 We support discovering ownership data from these URL:s.
 
 * **GitHub** profiles, repositories, commits and gists that isn't owned by an organization.
-* **SoundCloud** profiles, tacks and sets.
+* **SoundCloud** profiles, tracks and sets.
 * **Twitter** profiles and tweets.
+* **Instagram** photos.
 
 ##### Auto-submit URL:s
 

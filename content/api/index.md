@@ -18,7 +18,7 @@ All resource paths are relative to the API-endpoint.
 
 To gain access to private data clients need to use [OAuth 2](http://tools.ietf.org/html/draft-ietf-oauth-v2-21). OAuth 2 is a standardized protocol for how to allow end users to authorize clients to gain access to their private data in the form of access tokens. OAuth 2 rely on separate standards for the access tokens - we currently use [Bearer tokens](http://tools.ietf.org/html/draft-ietf-oauth-v2-bearer-08) which are the simplest and most widespread token type.
 
-To use OAuth 2 you need to [register their application](http://flattr.com/apps) and use the assigned Client ID and Client Secret. Client Secrets should be kept secret and not be revealed to anyone else than the application owner.
+To use OAuth 2 you need to [register your application](http://flattr.com/apps) and use the assigned Client ID and Client Secret. Client Secrets should be kept secret and not be revealed to anyone else than the application owner.
 
 ### Authenticate
 

@@ -7,8 +7,8 @@ http://developers.flattr.net.
 Getting started
 
   
-  * If you don't have bundler install it. `gem install bundler`
-  * `bundle install`
+  * If you don't have bundler install it. `sudo gem install bundler`
+  * `sudo bundle install`
   * `easy_install pygments`
   * `bundle exec foreman start`
   * Point your browser to `http://localhost:3000`

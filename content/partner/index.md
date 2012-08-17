@@ -91,7 +91,8 @@ The difference between normal buttons and the ones used by partners is that a pa
 
 The static auto-submit is a link that redirects to either an existing thing or to a temporary page where the thing can be flattred and thus also created through the auto-submit.
 
-The basic URL for the static auto-submit is `https://flattr.com/submit/auto` and to that a couple of query parameters are added of which two are critical for partners: The `url` and `owner` parameters. The auto-submit parameters for the thing description like `title` and `decription` are the same as for the button. See [embedded button documentation](/button) for a full list.
+The basic URL for the static auto-submit is `https://flattr.com/submit/auto` and to that a couple of query parameters are added see [embedded button documentation](/button).
+As with the Embedded buttons, a partner may assign an `owner` instead of the `uid` parameter.
 
 __Example Auto-submit URL__   
 

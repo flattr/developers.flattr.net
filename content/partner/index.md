@@ -28,7 +28,7 @@ Flattr button.
     s.type = 'text/javascript';
     s.async = true;
     s.src = '//api.flattr.com/js/0.6/load.js'+
-    	'?mode=auto&revsharekey=YOUR_REVENUE_SHARING_KEY';
+        '?mode=auto&revsharekey=YOUR_REVENUE_SHARING_KEY';
 
     t.parentNode.insertBefore(s, t);
  })();
@@ -67,7 +67,7 @@ The mechanism uses non-flattr user identifiers to identify ownership of the thin
 
 Namespaces are created in dialog with Flattr, so [contact us](https://flattr.com/contact) and we can discuss futher.
 
-Web Hook Callbacks are supported for notifying partners when something happens to one of their users unclaimed things - such as them receiving flattrs. That way partners can easily communicate what is happening on Flattr to their users and make them aware that they have money to claim.
+Web Hook Callbacks are supported for notifying partners when something happens to one of their users unclaimed things - such as them receiving flattrs. That way partners can easily communicate what is happening on Flattr to their users and make them aware that they have flattrs to claim..
 
 #### Auto-submit / Embedded buttons
 

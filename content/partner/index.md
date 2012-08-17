@@ -2,7 +2,7 @@
 title: Partner site integration
 ---
 
-If you are Flattr Partner you can use this documentation.
+This documentation is for Flattr Partners.
 
 You can apply for partnership over at our [partnership site](https://partner.flattr.com).
 
@@ -36,7 +36,7 @@ Flattr button.
 </script>
 ```
 
-**Example: Add the revenue sharing key as a HTML tag**
+**Example: Add the revenue sharing key as a data-flattr attribute on the link HTML tag**
 
 ```html
 <a class="FlattrButton" style="display:none;"
@@ -79,19 +79,19 @@ If for any reason embedded buttons won't work one can instead use our static aut
 
 Through the auto-submit process (auto-submitting means that a Flattr thing is created automatically when the first flattr is made - they don't have to be presubmitted) the description of the thing is currently also added - the name, category, language etc.
 
-__However__ - we're looking at moving away from auto-submit provided description data in the _future_ and fetch the description of the thing from its URL instead - using [Open Graph](http://ogp.me/) data or similar. Would be nice if partners kept this in mind when choosing URL:s for their things. Feedback is also welcome.
+__However__ - we're looking at moving away from auto-submit provided description data in the _future_ and fetch the description of the thing from its URL instead - using [Open Graph](http://ogp.me/) data or similar. Partners need to keep this in mind when choosing URL:s for their things. Feedback is also welcome.
 
 ##### Embedded Buttons
 
 [Embedded buttons](/button) for partners work the same way as a normal Flattr button.
 
-The difference between normal buttons and the ones used by partners is that community partners assigns an `owner` parameter instead of the `uid` parameter used by ordinary buttons. The owner parameter contains an identifier for a non-flattr user. See a list of supported identifiers in the section [Supported user identifiers](#supported-user-identifiers) at the end of this document.
+The difference between normal buttons and the ones used by partners is that a partner may assign an `owner` parameter instead of the `uid` parameter used by ordinary buttons. The owner parameter contains an identifier for a non-flattr user. See a list of supported identifiers in the section [Supported user identifiers](#supported-user-identifiers) at the end of this document.
 
 ##### Static Auto-submit
 
 The static auto-submit is a link that redirects to either an existing thing or to a temporary page where the thing can be flattred and thus also created through the auto-submit.
 
-The basic URL for the static auto-submit is `https://flattr.com/submit/auto` and to that a bunch of query parameters are added of which two are critical for community partners: The `url` and `owner` parameters. The auto-submit parameters for the thing description like `title` and `decription` are the same as for the button. See [embedded button documentation](/button) for a full list.
+The basic URL for the static auto-submit is `https://flattr.com/submit/auto` and to that a couple of query parameters are added of which two are critical for partners: The `url` and `owner` parameters. The auto-submit parameters for the thing description like `title` and `decription` are the same as for the button. See [embedded button documentation](/button) for a full list.
 
 __Example Auto-submit URL__   
 

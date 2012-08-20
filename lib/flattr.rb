@@ -289,7 +289,8 @@ module Flattr
         "avatar" => "",
         "about" => "This is the official Flattr account. We made this site :)",
         "city" => "",
-        "country" => ""
+        "country" => "",
+        "url" => "http://flattr.com"
       }
 
       USER_EXTENDED = USER.merge({

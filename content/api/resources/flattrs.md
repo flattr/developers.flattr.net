@@ -2,6 +2,9 @@
 title: Flattrs
 ---
 
+#### The Flattr object
+<%= response_fields(:flattr) %>
+
 #### List a users flattrs
 
 ##### Parameters

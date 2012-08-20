@@ -2,6 +2,12 @@
 title: Things
 ---
 
+#### The Thing object
+<%= response_fields(:thing) %>
+
+#### The Mini Thing object
+<%= response_fields(:mini_thing) %>
+
 #### List a users things
 
 ##### Parameters
@@ -18,7 +24,7 @@ GET <%= @config[:api_url]%>/users/:username/things
 ##### Example response
 
 <%= headers(200) %>
-<%= json(:thing) %>
+<%= json(:thing) {|t| [t]} %>
 
 ##### Errors
 

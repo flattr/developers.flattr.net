@@ -344,3 +344,23 @@ address a {
 
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td,
+table th {
+  border: 1px solid #DDD;
+  padding: 4px 5px;
+}
+
+table thead tr {
+  font-weight: bold;
+  background-color: #efefef;
+  text-align: left;
+}
+
+table tbody .mono {
+  font-family: Menlo, FreeMono, "Courier New", Courier,  monospace;
+}

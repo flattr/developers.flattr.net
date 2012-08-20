@@ -2,6 +2,12 @@
 title: Users
 ---
 
+#### The User object
+<%= response_fields(:user) %>
+
+#### The Mini User object
+<%= response_fields(:mini_user) %>
+
 #### Get a user
 
 ##### Request
@@ -9,9 +15,11 @@ title: Users
 GET <%= @config[:api_url] %>/users/:username
 ```
 
+
 ##### Example response
 <%= headers(200) %>
 <%= json(:user) %>
+
 
 ##### Errors
 
@@ -22,7 +30,9 @@ GET <%= @config[:api_url] %>/users/:username
 *[Authorization](/api/#authorization) needed*
 
 ##### Request
-    GET <%= @config[:api_url] %>/user
+```
+GET <%= @config[:api_url] %>/user
+```
 
 ##### Example response
 <%= headers(200) %>

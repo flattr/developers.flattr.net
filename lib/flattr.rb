@@ -70,6 +70,216 @@ module Flattr
         #"<pre><code class=\"language-javascript\">" + JSON.pretty_generate(hash) + "</code></pre>"
       end
 
+      def response_fields(resource)
+        resource = Resources.const_get("FIELDS_"+resource.to_s.upcase)
+        html = "<p><table>\n"
+        html << "<thead><tr><th>Field</th><th>Type</th><th>Permission</th><th>Description</th></tr></thead>\n"
+        html << "<tbody>"
+        resource.each do |field,data|
+          html << "<tr><td class=\"mono\">#{field}</td><td class=\"mono\">#{data[:type].join(", ")}</td><td>#{data[:scope].join(", ")}</td><td>#{data[:description]}</td></tr>\n"
+        end
+        html << "</tbody></table></p>\n"
+        html
+      end
+
+      FIELDS_FLATTR = {
+        "type" => {
+          :type => ['string'],
+          :scope => [],
+          :description => 'Object type, set to <code>flattr</code>.',
+        },
+        "thing" => {
+          :type => ['hash'],
+          :scope => [],
+          :description => 'Contains a <a href="/api/resources/things/#the-thing-object">thing object</a>.',
+        },
+        "owner" => {
+          :type => ['hash'],
+          :scope => [],
+          :description => 'Contains either a <a href="/api/resources/users/#the-user-object">user object</a> or a <a href="/api/resources/users/#the-mini-user-object">mini user object</a> (<strong>default</strong>).',
+        },
+        "created_at" => {
+          :type => ["string"],
+          :scope => [],
+          :description => "Format is unixtime."
+        }
+      }
+
+      FIELDS_MINI_USER = FIELDS_USER.keep_if{|k,v| %w{type resource link username}.include?(k) }
+
+      FIELDS_USER = {
+        "type" => {
+          :type => ['string'],
+          :scope => [],
+          :description => 'Object type, set to <code>user</code>.',
+        },
+        "resource" => {
+          :type => ['string'],
+          :scope => [],
+          :description => 'URL to the API resource',
+        },
+        "link" => {
+          :type => ['string'],
+          :scope => [],
+          :description => 'URL to user on Flattr.com website',
+        },
+        "username" => {
+          :type => ['string'],
+          :scope => [],
+          :description => 'Username on Flattr',
+        },
+        "url" => {
+          :type => ['string'],
+          :scope => [],
+          :description => 'URL set by the user',
+        },
+        "firstname" => {
+          :type => ['string'],
+          :scope => [],
+          :description => '',
+        },
+        "lastname" => {
+          :type => ['string'],
+          :scope => [],
+          :description => '',
+        },
+        "avatar" => {
+          :type => ['string'],
+          :scope => [],
+          :description => 'URL to a Flattr avatar, size: 48x48px',
+        },
+        "about" => {
+          :type => ['string'],
+          :scope => [],
+          :description => 'Short description about the user',
+        },
+        "city" => {
+          :type => ['string'],
+          :scope => [],
+          :description => '',
+        },
+        "country" => {
+          :type => ['string'],
+          :scope => [],
+          :description => '',
+        },
+        "email" => {
+          :type => ['string'],
+          :scope => ['<a href="/api/#scopes">email</a>', '<a href="/api/#scopes">extendedread</a>'],
+          :description => '',
+        },
+        "registered_at" => {
+          :type => ['int'],
+          :scope => ['<a href="/api/#scopes">extendedread</a>'],
+          :description => 'Format is unixtime',
+        }
+      }
+
+      FIELDS_MINI_THING = FIELDS_THING.keep_if{|k,v| %w{type resource link id url title image flattrs}.include?(k) }
+
+      FIELDS_THING = {
+        'type' => {
+          :type => ['string'],
+          :scope => [],
+          :description => 'Object type, set to <code>thing</code>.',
+        },
+        "resource" => {
+          :type => ['string'],
+          :scope => [],
+          :description => 'URL to the API resource',
+        },
+        "link" => {
+          :type => ['string'],
+          :scope => [],
+          :description => 'URL to user on Flattr.com website',
+        },
+        'id' => {
+          :type => ['int'],
+          :scope => [],
+          :description => 'ID of the thing',
+        },
+        'url' => {
+          :type => ['string'],
+          :scope => [],
+          :description => 'URL the thing is pointing to',
+        },
+        'flattrs' => {
+          :type => ['int'],
+          :scope => [],
+          :description => 'Number of flattrs',
+        },
+        'flattrs_user_count' => {
+          :type => ['int'],
+          :scope => [],
+          :description => 'Number of user who have flattred',
+        },
+        'title' => {
+          :type => ['string'],
+          :scope => [],
+          :description => 'Title of the thing',
+        },
+        'description' => {
+          :type => ['string'],
+          :scope => [],
+          :description => 'Description of the thing',
+        },
+        'tags' => {
+          :type => ['array'],
+          :scope => [],
+          :description => 'Array with tags as strings',
+        },
+        'language' => {
+          :type => ['string'],
+          :scope => [],
+          :description => '<a href="/api/resources/languages/">Langauge</a>',
+        },
+        'category' => {
+          :type => ['string'],
+          :scope => [],
+          :description => '<a href="/api/resources/categories/">Category</a>',
+        },
+        'created_at' => {
+          :type => ['int'],
+          :scope => [],
+          :description => 'Format is unixtime',
+        },
+        'owner' => {
+          :type => ['array'],
+          :scope => [],
+          :description => 'User who owns the thing',
+        },
+        'hidden' => {
+          :type => ['bool'],
+          :scope => [],
+          :description => 'Hidden or not in listings. Example, API search and Catalog.',
+        },
+        'image' => {
+          :type => ['string'],
+          :scope => [],
+          :description => 'URL to thing image',
+        },
+        'owner' => {
+          :type => ['hash'],
+          :scope => [],
+          :description => 'Contains either a <a href="/api/resources/users/#the-user-object">user object</a> or a <a href="/api/resources/users/#the-mini-user-object">mini user object</a> (<strong>default</strong>).',
+        },
+        'flattred' => {
+          :type => ['bool'],
+          :scope => ['<a href="/api/#authenticate">authenticated</a>'],
+          :description => 'Has the authenticated user flattred the thing',
+        },
+        'last_flattr_at' => {
+          :type => ['int'],
+          :scope => ["owner"],
+          :description => 'Last time flattred. Format is unixtime. Only available if the authenticated user owns the thing.',
+        },
+        'updated_at' => {
+          :type => ['int'],
+          :scope => ["owner"],
+          :description => 'Last time updated. Format is unixtime. Only available if the authenticated user owns the thing.',
+        }
+      }
+
       THING_PUBLIC = {
         "type" => "thing",
         "resource" => "https://api.flattr.com/rest/v2/things/423405",

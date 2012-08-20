@@ -41,7 +41,8 @@ In **HTML** add something like this to the head-tag of the document:
 
 * [Podkicker Pro Podcast Player](https://play.google.com/store/apps/details?id=com.podkicker) (Support for feeds)
 * [Flattr Chrome Extension](https://chrome.google.com/webstore/detail/opjnhfkbdoopgfbefgbdkpjnbghffmln) (Support for HTML)
-* _Soon:_ [Flattr Firefox Add-on](https://addons.mozilla.org/firefox/addon/flattr/) (Support for HTML)
+* [Flattr Firefox Add-on](https://addons.mozilla.org/firefox/addon/flattr/) (Support for HTML)
+* [gPodder](http://gpodder.org/) (Support for feeds)
 
 ### Provider support
 

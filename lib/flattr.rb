@@ -174,7 +174,7 @@ module Flattr
         }
       }
 
-      FIELDS_MINI_USER = FIELDS_USER.keep_if{|k,v| %w{type resource link username}.include?(k) }
+      FIELDS_MINI_USER = FIELDS_USER.select{|k,v| %w{type resource link username}.include?(k) }
 
       FIELDS_THING = {
         'type' => {
@@ -279,7 +279,7 @@ module Flattr
         }
       }
 
-      FIELDS_MINI_THING = FIELDS_THING.keep_if{|k,v| %w{type resource link id url title image flattrs}.include?(k) }
+      FIELDS_MINI_THING = FIELDS_THING.select{|k,v| %w{type resource link id url title image flattrs}.include?(k) }
 
       THING_PUBLIC = {
         "type" => "thing",

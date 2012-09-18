@@ -241,7 +241,7 @@ DELETE <%= @config[:api_url]%>/things/:id
 - **query** (_Optional_) - string Free text search string
 - **url** (_Optional_) - string Filter by url
 - **tags** (_Optional_) - string Filter by tags, see syntax below
-- **language** (_Optional_) - string Filter by language
+- **language** (_Optional_) - string Filter by language. If you wan't to search more than one language you can separate them with a `,` (comma).
 - **category** (_Optional_) - string Filter by category. If you wan't to search more than one category you can separate them with a `,` (comma).
 - **user** (_Optional_) - string Filter by username
 - **sort** (_Optional_) - string Sort by `trend`, `flattrs` (all time),

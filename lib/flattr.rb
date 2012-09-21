@@ -462,31 +462,31 @@ module Flattr
       CATEGORIES = [
           {
             "id" => "text",
-            "name" => "Text"
+            "text" => "Text"
           },
           {
             "id" => "images",
-            "name" => "Images"
+            "text" => "Images"
           },
           {
             "id" => "video",
-            "name" => "Video"
+            "text" => "Video"
           },
           {
             "id" => "audio",
-            "name" => "Audio"
+            "text" => "Audio"
           },
           {
             "id" => "software",
-            "name" => "Software"
+            "text" => "Software"
           },
           {
             "id" => "people",
-            "name" => "People"
+            "text" => "People"
           },
           {
             "id" => "rest",
-            "name" => "Other"
+            "text" => "Other"
           }
       ]
 

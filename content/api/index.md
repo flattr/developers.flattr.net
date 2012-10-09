@@ -15,7 +15,7 @@ All resource paths are relative to the API-endpoint.
 
 ## Create a application
 
-To use the API you need to [register a application](http://flattr.com/apps) and use the assigned Client ID and Client Secret. Client Secrets should be kept secret and not be revealed to anyone else than the application owner.
+To use the API you need to [register a application](http://flattr.com/apps/new) and use the assigned Client ID and Client Secret. Client Secrets should be kept secret and not be revealed to anyone else than the application owner.
 
 ## Authorization
 

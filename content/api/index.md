@@ -13,19 +13,20 @@ This API is newly released and is still in beta. We want your feedback on it to 
 
 All resource paths are relative to the API-endpoint.
 
+## Create a application
+
+To use the API you need to [register a application](http://flattr.com/apps) and use the assigned Client ID and Client Secret. Client Secrets should be kept secret and not be revealed to anyone else than the application owner.
 
 ## Authorization
 
-To gain access to private data clients need to use [OAuth 2](http://tools.ietf.org/html/draft-ietf-oauth-v2-21). OAuth 2 is a standardized protocol for how to allow end users to authorize clients to gain access to their private data in the form of access tokens. OAuth 2 rely on separate standards for the access tokens - we currently use [Bearer tokens](http://tools.ietf.org/html/draft-ietf-oauth-v2-bearer-08) which are the simplest and most widespread token type.
-
-To use OAuth 2 you need to [register your application](http://flattr.com/apps) and use the assigned Client ID and Client Secret. Client Secrets should be kept secret and not be revealed to anyone else than the application owner.
+To gain access to private data we use [OAuth 2](http://tools.ietf.org/html/draft-ietf-oauth-v2-21) for authentication. OAuth 2 is a standardized protocol for how to allow end users to authorize clients to gain access to their private data in the form of access tokens. OAuth 2 rely on separate standards for the access tokens - we currently use [Bearer tokens](http://tools.ietf.org/html/draft-ietf-oauth-v2-bearer-08) which are the simplest and most widespread token type.
 
 ### Authenticate
 
 To get a token you need to use the [authorization code flow](http://tools.ietf.org/html/draft-ietf-oauth-v2-21#section-4.1).
 
 - **response_type** ( _Required_ ) - This can be set to `code` or `token`
-- **client_id** ( _Required_ ) - The client_id found at http://flattr.com/apps
+- **client_id** ( _Required_ ) - The client id
 - **redirect_uri** ( _Optional_ ) -  The callback URL supplied when creating
   the application. It needs to be identical or else the authentication
   will fail.
@@ -40,7 +41,7 @@ To get a token you need to use the [authorization code flow](http://tools.ietf.o
 
 If the end user authorize your application the user will be redirect to
 your specified redirect\_uri which must be in the *callback_domain* you
-specified when you registered your app at https://flattr.com/apps along
+specified when you registered your app at [https://flattr.com/apps/new](https://flattr.com/apps/new) along
 side with a parameter named `code` whom you can exchange for an
 access token.
 

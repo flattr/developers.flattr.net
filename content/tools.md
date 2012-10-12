@@ -19,8 +19,9 @@ are tools missing feel free to [send us a link](https://flattr.com/contact) or m
 <img src="http://typo3.org/favicon.ico" width="16" height="16">&nbsp;[TYPO3 Plugin](http://typo3.org/extensions/repository/view/flattrbtn/current/ )   
 <img src="http://typo3.org/favicon.ico" width="16" height="16">&nbsp;[TYPO3 Extension](http://typo3.org/extensions/repository/view/cap_flattr_news/current )   
 <img src="http://explore.live.com/favicon.ico" width="16" height="16">&nbsp;[Windows Live Writer plugin](http://www.live-writer.net/2010/07/07/insert-flattr-button/ )   
-<img src="https://secure.gravatar.com/blavatar/4e21d703d81809d215ceaabbf07efbc6?s=16" width="16" height="16">&nbsp;[WordPress Plugin](http://wordpress.org/extend/plugins/flattr/)   
-<img src="https://secure.gravatar.com/blavatar/4e21d703d81809d215ceaabbf07efbc6?s=16" width="16" height="16">&nbsp;[WordPress Comments](https://wordpress.org/extend/plugins/flattrcomments/ )   
+<img src="https://secure.gravatar.com/blavatar/4e21d703d81809d215ceaabbf07efbc6?s=16" width="16" height="16">&nbsp;[WordPress.org Plugin](http://wordpress.org/extend/plugins/flattr/)   
+<img src="https://secure.gravatar.com/blavatar/4e21d703d81809d215ceaabbf07efbc6?s=16" width="16" height="16">&nbsp;[WordPress.org Comments](https://wordpress.org/extend/plugins/flattrcomments/ )   
+<img src="https://secure.gravatar.com/blavatar/4e21d703d81809d215ceaabbf07efbc6?s=16" width="16" height="16">&nbsp;[WordPress.com Widget](http://tools.flattr.net/wordpress/)   
 
 ### Forum & Wiki
 [BBCode (phpBB2 phpBB3, vBulletin)](http://nicolas-gramlich.blogspot.dev/2010/05/using-flattr-in-forum-board-signature.html)   

@@ -344,11 +344,13 @@ module Flattr
       THING_FULL = THING_PUBLIC.merge({
         "last_flattr_at" => 1320262599,
         "updated_at" => 0,
-        "flattred" => false
+        "flattred" => false,
+        "subscribed" => true
       })
 
       THING =  THING_PUBLIC.merge({
-        "flattred" => false
+        "flattred" => false,
+        "subscribed" => true
       })
 
       THING_LOOKUP = {
@@ -405,14 +407,50 @@ module Flattr
         "description" => "Thing was successfully flattred",
         "thing" => {
           "type" => "thing",
-          "resource" => "https://api.flattr.dev/rest/v2/things/423405",
-          "link" => "https://flattr.dev/thing/423405",
+          "resource" => "https://api.flattr.com/rest/v2/things/423405",
+          "link" => "https://flattr.com/thing/423405",
           "id" => 423405,
           "flattrs" => 3,
           "url" => "http://blog.flattr.net/2011/10/api-v2-beta-out-whats-changed/",
           "title" => "API v2 beta out - what's changed?",
           "image" => "https://flattr.com/thing/image/4/2/3/4/0/5/medium.png",
         }
+        # This is a attribute that isn't supposed to be there. It has never been
+        # in the documentation but is in the API. Don't add it to the documentation.
+        # "location" => "https://api.flattr.com/rest/v2/things/423405"
+      }
+
+      SUBSCRIPTION = {
+        "type" => "subscription",
+        "active" => true,
+        "created_at" => 1350654024,
+        "started_at" => 1351164964,
+        "thing" => THING
+      }
+
+      SUBSCRIPTION_CREATE = {
+        "message" => "ok",
+        "description" => "Successfully subscribed to Thing",
+        "thing" => {
+          "type" => "thing",
+          "resource" => "https://api.flattr.com/rest/v2/things/423405",
+          "link" => "https://flattr.com/thing/423405",
+          "id" => 423405,
+          "flattrs" => 3,
+          "url" => "http://blog.flattr.net/2011/10/api-v2-beta-out-whats-changed/",
+          "title" => "API v2 beta out - what's changed?",
+          "image" => "https://flattr.com/thing/image/4/2/3/4/0/5/medium.png",
+        }
+      }
+
+      SUBSCRIPTION_START = {
+        "message" => "started",
+        "description" => "Subscription started",
+      }
+
+      SUBSCRIPTION_PAUSE = {
+        "message" => "paused",
+        "description" => "Subscription paused",
       }
 
       ACTIVITIES =

@@ -1,3 +1,5 @@
+Warning: This documentation is deprecated!
+
 Flattr developer documentation
 ==============================
 
